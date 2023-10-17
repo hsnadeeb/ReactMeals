@@ -1,5 +1,5 @@
 /* Summary Styles */
-.summary {
+/* .summary {
     background: #a39f9f;
     padding: 20px;
     text-align: center;
@@ -8,7 +8,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 80%;
+    z-index: 2;
+  } */
+
+
+  .summary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  .summary {
+    background: #a39f9f;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
     max-width: 500px;
     width: 80%;
   }
