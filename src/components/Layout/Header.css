@@ -1,0 +1,40 @@
+
+header {
+    background: #f87408;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .cart-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: brown;
+    border-radius: 10px;
+    padding: 15px 25px;
+
+  }
+  
+  button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .cart-item-count {
+    background-color: #fff;
+    color: #ff5722;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+  
