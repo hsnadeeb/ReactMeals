@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Layout/Header';
 import Summary from './components/Layout/Summary';
 import Meals from './components/Meals/Meals';
+import Cart from './components/Cart/Cart';
 function App() {
   
   const meals = [
@@ -17,6 +18,7 @@ function App() {
     <div>
       <Header />
       <Summary />
+      <Cart />
 
       <div className="meals">
         {meals.map((meal, index) => (

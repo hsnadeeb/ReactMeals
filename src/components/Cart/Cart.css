@@ -1,0 +1,44 @@
+/* Cart Styles */
+.cart-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-items li {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .totalAmount {
+    text-align: right;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .totalAmount span {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .btnClose,
+  .btnOrder {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .btnOrder {
+    background: #4caf50;
+  }
+  
