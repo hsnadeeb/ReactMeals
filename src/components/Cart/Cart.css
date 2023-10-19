@@ -1,4 +1,5 @@
-/* Cart Styles */
+
+
 .cart-items {
     list-style: none;
     padding: 0;
@@ -41,4 +42,3 @@
   .btnOrder {
     background: #4caf50;
   }
-  
