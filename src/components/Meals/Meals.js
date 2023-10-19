@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Meals.css';
+import CartContext from '../../store/cart-context';  
 
 const Meal = ({ name, description, price }) => {
   const [quantity, setQuantity] = useState(1);
+
+  const cartCtx = useContext(CartContext);
 
   const handleQuantityChange = (e) => {
     setQuantity(parseInt(e.target.value, 10));
   };
 
   const handleAddToCart = () => {
-    
-    console.log(`Added ${quantity} x ${name} to the cart.`);
+    const item = {
+      name: name,
+      description: description,
+      price: price,
+      amount: quantity,
+    };
+    cartCtx.addItem(item);
   };
 
   return (
@@ -38,6 +46,6 @@ const Meal = ({ name, description, price }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Meal;

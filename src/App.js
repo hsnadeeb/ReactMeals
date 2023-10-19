@@ -3,6 +3,7 @@ import Header from './components/Layout/Header';
 import Summary from './components/Layout/Summary';
 import Meals from './components/Meals/Meals';
 import Cart from './components/Cart/Cart';
+import CartProvider from './store/CartProvider';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -24,7 +25,7 @@ function App() {
   ];
 
   return (
-    <div>
+    <CartProvider>
       <Header onOpenCart={openCartHandler} />
       <Summary />
       {isCartOpen && <Cart onCloseCart={closeCartHandler} />}
@@ -39,7 +40,7 @@ function App() {
           />
         ))}
       </div>
-    </div>
+    </CartProvider>
   );
 }
 
