@@ -1,10 +1,9 @@
 import React, { useState, useContext } from 'react';
 import './Meals.css';
-import CartContext from '../../store/cart-context';  
+import CartContext from '../../store/cart-context';
 
-const Meal = ({ name, description, price }) => {
+const Meal = ({ id, name, description, price }) => {
   const [quantity, setQuantity] = useState(1);
-
   const cartCtx = useContext(CartContext);
 
   const handleQuantityChange = (e) => {
@@ -13,12 +12,14 @@ const Meal = ({ name, description, price }) => {
 
   const handleAddToCart = () => {
     const item = {
+      id: name, // Ensure each item has a unique identifier
       name: name,
       description: description,
       price: price,
       amount: quantity,
     };
     cartCtx.addItem(item);
+    console.log('Adding item:', item);
   };
 
   return (
@@ -31,6 +32,13 @@ const Meal = ({ name, description, price }) => {
       <div className="meal-form">
         <form>
           <label htmlFor="quantity">Quantity: </label>
+          <button
+            type="button"
+            onClick={() => setQuantity(quantity - 1)}
+            disabled={quantity === 1}
+          >
+            -
+          </button>
           <input
             type="number"
             id="quantity"
@@ -39,6 +47,9 @@ const Meal = ({ name, description, price }) => {
             onChange={handleQuantityChange}
             min="1"
           />
+          <button type="button" onClick={() => setQuantity(quantity + 1)}>
+            +
+          </button>
           <button type="button" onClick={handleAddToCart}>
             ADD
           </button>

@@ -46,3 +46,38 @@
 .btnOrder {
   background: #4caf50;
 }
+
+/* ... your existing styles ... */
+
+.cart-item-details {
+  display: flex;
+  align-items: center;
+}
+
+.plus-button,
+.minus-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.2s;
+}
+
+.plus-button:hover,
+.minus-button:hover {
+  background: #0056b3;
+}
+
+.item-quantity {
+  font-size: 18px;
+}
+
+/* ... your existing styles ... */
